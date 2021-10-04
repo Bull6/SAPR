@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1115</width>
+    <height>299</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+    <horstretch>0</horstretch>
+    <verstretch>10</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>SAPR_Economy</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>1101</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>1101</width>
+        <height>1141</height>
+       </size>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::StrongFocus</enum>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::ActionsContextMenu</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAsNeeded</enum>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1082</width>
+         <height>829</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0" colspan="4">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>Расчет удельных капитальных вложений в строительство здания </string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Стоимость 1 кв.м произ. площ</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2" colspan="2">
+         <widget class="QLineEdit" name="price_S"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Произв. площадь цеха</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2" colspan="2">
+         <widget class="QLineEdit" name="Space"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Годовая производительность линии</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2" colspan="2">
+         <widget class="QLineEdit" name="year_W"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Удельные капитальные вложения</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QLabel" name="form_ceh">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="4">
+         <widget class="QPushButton" name="Button1">
+          <property name="text">
+           <string>Result</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0" colspan="8">
+         <widget class="Line" name="line">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0" colspan="4">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>Расчет удельных капитальных вложений в строительство специальных </string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0">
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>Стоимость строительной части камер</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="6">
+         <widget class="QLineEdit" name="part_cam"/>
+        </item>
+        <item row="8" column="0" colspan="2">
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>Стоимость устройства системы пароснабжения</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="6">
+         <widget class="QLineEdit" name="system_steam"/>
+        </item>
+        <item row="9" column="0">
+         <widget class="QLabel" name="label_9">
+          <property name="text">
+           <string>Стоимость вентиляции камеры</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="6">
+         <widget class="QLineEdit" name="vent_cam"/>
+        </item>
+        <item row="10" column="0" colspan="2">
+         <widget class="QLabel" name="label_10">
+          <property name="text">
+           <string>Стоимость устройства КИП и автоматики</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="6">
+         <widget class="QLineEdit" name="KIP_n_automatic"/>
+        </item>
+        <item row="11" column="0" colspan="2">
+         <widget class="QLabel" name="label_11">
+          <property name="text">
+           <string>Общий объем всех камер термообработки</string>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="6">
+         <widget class="QLineEdit" name="V_cam_term"/>
+        </item>
+        <item row="12" column="0">
+         <widget class="QLabel" name="label_12">
+          <property name="text">
+           <string>Число камер</string>
+          </property>
+         </widget>
+        </item>
+        <item row="12" column="6">
+         <widget class="QLineEdit" name="cams"/>
+        </item>
+        <item row="13" column="0">
+         <widget class="QLabel" name="label_13">
+          <property name="text">
+           <string>Стоимость устройства приямков</string>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="6">
+         <widget class="QLineEdit" name="price_priyamkov"/>
+        </item>
+        <item row="14" column="0" colspan="3">
+         <widget class="QLabel" name="label_14">
+          <property name="text">
+           <string>Стоимость ямных и туннельных камер тепловой обработки</string>
+          </property>
+         </widget>
+        </item>
+        <item row="14" column="6">
+         <widget class="QLabel" name="price_yamnih_tunel_cams">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="15" column="0" colspan="4">
+         <widget class="QLabel" name="label_16">
+          <property name="text">
+           <string>Удел. капитальные вложения в строительство спец. техн. сооруж</string>
+          </property>
+         </widget>
+        </item>
+        <item row="15" column="6">
+         <widget class="QLabel" name="spec_tech_build">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="15" column="7">
+         <widget class="QPushButton" name="Button2">
+          <property name="text">
+           <string>Result</string>
+          </property>
+         </widget>
+        </item>
+        <item row="16" column="0" colspan="8">
+         <widget class="Line" name="line_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="17" column="0" colspan="3">
+         <widget class="QLabel" name="label_15">
+          <property name="text">
+           <string>Расчет удельных капитальных вложений на приобретение </string>
+          </property>
+         </widget>
+        </item>
+        <item row="18" column="0" colspan="2">
+         <widget class="QLabel" name="label_17">
+          <property name="text">
+           <string>Стоимость оборудования (через запятую)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="18" column="3" colspan="2">
+         <widget class="QLineEdit" name="payment"/>
+        </item>
+        <item row="19" column="0">
+         <widget class="QLabel" name="label_18">
+          <property name="text">
+           <string>Полная стоимость оборудования</string>
+          </property>
+         </widget>
+        </item>
+        <item row="19" column="3">
+         <widget class="QLabel" name="payment_tech">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="19" column="5">
+         <widget class="QPushButton" name="Button3">
+          <property name="text">
+           <string>Result</string>
+          </property>
+         </widget>
+        </item>
+        <item row="20" column="3">
+         <widget class="QLabel" name="payment_tech_2">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="21" column="0" colspan="8">
+         <widget class="Line" name="line_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="22" column="0" colspan="4">
+         <widget class="QLabel" name="label_19">
+          <property name="text">
+           <string>Общие удел капит. вложения в строительство формовочного цеха</string>
+          </property>
+         </widget>
+        </item>
+        <item row="22" column="5">
+         <widget class="QLabel" name="sum_form_ceh">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="22" column="7">
+         <widget class="QPushButton" name="Button4">
+          <property name="text">
+           <string>Result</string>
+          </property>
+         </widget>
+        </item>
+        <item row="23" column="0" rowspan="2" colspan="8">
+         <widget class="Line" name="line_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="24" column="1" colspan="4">
+         <widget class="QLabel" name="label_20">
+          <property name="text">
+           <string>Расчет стоимости материалов и энергии</string>
+          </property>
+         </widget>
+        </item>
+        <item row="25" column="0" colspan="2">
+         <widget class="QLabel" name="label_21">
+          <property name="text">
+           <string>Заготовительная цена на цемент и металл</string>
+          </property>
+         </widget>
+        </item>
+        <item row="26" column="0">
+         <widget class="QLabel" name="label_22">
+          <property name="text">
+           <string>Оптовая цена на цемент</string>
+          </property>
+         </widget>
+        </item>
+        <item row="26" column="7">
+         <widget class="QLineEdit" name="cement"/>
+        </item>
+        <item row="27" column="0">
+         <widget class="QLabel" name="label_23">
+          <property name="text">
+           <string>Оптовая цена на металл</string>
+          </property>
+         </widget>
+        </item>
+        <item row="27" column="7">
+         <widget class="QLineEdit" name="metal"/>
+        </item>
+        <item row="28" column="0" colspan="3">
+         <widget class="QLabel" name="label_24">
+          <property name="text">
+           <string>Стоимость подачи и уборки вагонов на станции назначения</string>
+          </property>
+         </widget>
+        </item>
+        <item row="28" column="7">
+         <widget class="QLineEdit" name="podacha_i_uborka"/>
+        </item>
+        <item row="29" column="0" colspan="6">
+         <widget class="QLabel" name="label_25">
+          <property name="text">
+           <string>Стоимость перевозки от станции назначения до заводского склада по путям не общего пользования</string>
+          </property>
+         </widget>
+        </item>
+        <item row="29" column="7">
+         <widget class="QLineEdit" name="perevozka"/>
+        </item>
+        <item row="30" column="0" colspan="3">
+         <widget class="QLabel" name="label_26">
+          <property name="text">
+           <string>Стоимость разгрузки на складе завода потребителя</string>
+          </property>
+         </widget>
+        </item>
+        <item row="30" column="7">
+         <widget class="QLineEdit" name="razgruzka"/>
+        </item>
+        <item row="31" column="0" colspan="3">
+         <widget class="QLabel" name="label_27">
+          <property name="text">
+           <string>Затраты транспортно-сырьевого цеха завода потребителя</string>
+          </property>
+         </widget>
+        </item>
+        <item row="31" column="7">
+         <widget class="QLineEdit" name="transport_ceh"/>
+        </item>
+        <item row="32" column="0" colspan="4">
+         <widget class="QLabel" name="label_28">
+          <property name="text">
+           <string>Коэффициент, учитывающий наценки снабженческо сбытовых организаций</string>
+          </property>
+         </widget>
+        </item>
+        <item row="32" column="7">
+         <widget class="QLabel" name="koef">
+          <property name="text">
+           <string>1.06</string>
+          </property>
+         </widget>
+        </item>
+        <item row="33" column="0" colspan="2">
+         <widget class="QLabel" name="label_29">
+          <property name="text">
+           <string>Cтоимость тары, упаковки и реквизита</string>
+          </property>
+         </widget>
+        </item>
+        <item row="33" column="7">
+         <widget class="QLineEdit" name="tara"/>
+        </item>
+        <item row="34" column="0">
+         <widget class="QLabel" name="label_30">
+          <property name="text">
+           <string>Заготовительная цена на цемент </string>
+          </property>
+         </widget>
+        </item>
+        <item row="34" column="7">
+         <widget class="QLabel" name="price_cement">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="35" column="0">
+         <widget class="QLabel" name="label_31">
+          <property name="text">
+           <string>Заготовительная цена на металл</string>
+          </property>
+         </widget>
+        </item>
+        <item row="35" column="7">
+         <widget class="QLabel" name="price_metal">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="35" column="8">
+         <widget class="QPushButton" name="Button5">
+          <property name="text">
+           <string>Result</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QScrollArea" name="scrollArea_2">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1078</width>
+         <height>562</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_32">
+          <property name="text">
+           <string>Заготовительная цена щебня, гравия, песка </string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_33">
+          <property name="text">
+           <string>Оптовая цена на щебень</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLineEdit" name="opt_price_sheb"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_34">
+          <property name="text">
+           <string>Оптовая цена на гравий</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QLineEdit" name="opt_price_grav"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_35">
+          <property name="text">
+           <string>Оптовая цена на песок</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QLineEdit" name="opt_price_desert"/>
+        </item>
+        <item row="4" column="0" colspan="2">
+         <widget class="QLabel" name="label_36">
+          <property name="text">
+           <string>Коэффициент, учитывающий наценки снабженческо-сбытовых организаций</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="3">
+         <widget class="QLabel" name="nacenki">
+          <property name="text">
+           <string>1.06</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0" colspan="3">
+         <widget class="QLabel" name="label_37">
+          <property name="text">
+           <string>Стоимость перевозки от станции назначения до заводского склада по путям не общего пользования</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="3">
+         <widget class="QLineEdit" name="price_transp"/>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="label_38">
+          <property name="text">
+           <string>Объемная масса щебня</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="3">
+         <widget class="QLabel" name="V_sheb">
+          <property name="text">
+           <string>1.6</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0">
+         <widget class="QLabel" name="label_39">
+          <property name="text">
+           <string>Объемная масса песка</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="3">
+         <widget class="QLabel" name="V_desert">
+          <property name="text">
+           <string>1.2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="0">
+         <widget class="QLabel" name="label_40">
+          <property name="text">
+           <string>Объемная масса гравия</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="3">
+         <widget class="QLabel" name="V_grav">
+          <property name="text">
+           <string>1.4</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="0">
+         <widget class="QLabel" name="label_41">
+          <property name="text">
+           <string>Стоимость подачи и уборки вагонов 1 масса гравия</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="3">
+         <widget class="QLineEdit" name="p_clr_vag1"/>
+        </item>
+        <item row="10" column="0">
+         <widget class="QLabel" name="label_42">
+          <property name="text">
+           <string>Стоимость подачи и уборки вагонов 2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="3">
+         <widget class="QLineEdit" name="p_clr_vag2"/>
+        </item>
+        <item row="11" column="0">
+         <widget class="QLabel" name="label_43">
+          <property name="text">
+           <string>Стоимость разгрузки на складе завода потребителя</string>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="3">
+         <widget class="QLineEdit" name="p_razgruz"/>
+        </item>
+        <item row="12" column="0" colspan="2">
+         <widget class="QLabel" name="label_44">
+          <property name="text">
+           <string>Затраты транспортно-сырьевого цеха завода потребителя</string>
+          </property>
+         </widget>
+        </item>
+        <item row="12" column="3">
+         <widget class="QLineEdit" name="p_transp_sir_ceh"/>
+        </item>
+        <item row="13" column="0">
+         <widget class="QLabel" name="label_45">
+          <property name="text">
+           <string>Заготовительная цена на щебень</string>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="3">
+         <widget class="QLabel" name="price_sheb">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="14" column="0">
+         <widget class="QLabel" name="label_46">
+          <property name="text">
+           <string>Заготовительная цена на гравий</string>
+          </property>
+         </widget>
+        </item>
+        <item row="14" column="3">
+         <widget class="QLabel" name="price_grav">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="15" column="0">
+         <widget class="QLabel" name="label_47">
+          <property name="text">
+           <string>Заготовительная цена на песок</string>
+          </property>
+         </widget>
+        </item>
+        <item row="15" column="3">
+         <widget class="QLabel" name="price_desert">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="15" column="4">
+         <widget class="QPushButton" name="Button6">
+          <property name="text">
+           <string>Result</string>
+          </property>
+         </widget>
+        </item>
+        <item row="16" column="0" colspan="5">
+         <widget class="Line" name="line_5">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="17" column="0">
+         <widget class="QLabel" name="label_48">
+          <property name="text">
+           <string>Стоимость 1м^3 бетонной смеси</string>
+          </property>
+         </widget>
+        </item>
+        <item row="18" column="0">
+         <widget class="QLabel" name="label_49">
+          <property name="text">
+           <string>Удельный расход 1-ой составляющей бетонной смеси</string>
+          </property>
+         </widget>
+        </item>
+        <item row="18" column="1">
+         <widget class="QLineEdit" name="first"/>
+        </item>
+        <item row="19" column="0">
+         <widget class="QLabel" name="label_50">
+          <property name="text">
+           <string>Удельный расход 2-ой составляющей бетонной смеси</string>
+          </property>
+         </widget>
+        </item>
+        <item row="19" column="1">
+         <widget class="QLineEdit" name="second"/>
+        </item>
+        <item row="20" column="0">
+         <widget class="QLabel" name="label_51">
+          <property name="text">
+           <string>Удельный расход 3-ой составляющей бетонной смеси</string>
+          </property>
+         </widget>
+        </item>
+        <item row="20" column="1">
+         <widget class="QLineEdit" name="third"/>
+        </item>
+        <item row="21" column="0">
+         <widget class="QLabel" name="label_52">
+          <property name="text">
+           <string>Удельный расход 4-ой составляющей бетонной смеси</string>
+          </property>
+         </widget>
+        </item>
+        <item row="21" column="1">
+         <widget class="QLineEdit" name="fourth"/>
+        </item>
+        <item row="22" column="0">
+         <widget class="QLabel" name="label_53">
+          <property name="text">
+           <string>Стоимость переработки на бетоносмесительном узле</string>
+          </property>
+         </widget>
+        </item>
+        <item row="22" column="1">
+         <widget class="QLabel" name="recicle">
+          <property name="text">
+           <string>8500</string>
+          </property>
+         </widget>
+        </item>
+        <item row="23" column="0">
+         <widget class="QLabel" name="label_78">
+          <property name="text">
+           <string>Стоимость 1м^3 бетонной смеси</string>
+          </property>
+         </widget>
+        </item>
+        <item row="23" column="1">
+         <widget class="QLabel" name="price_beton">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="23" column="2">
+         <widget class="QPushButton" name="Button7">
+          <property name="text">
+           <string>Result</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1115</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
