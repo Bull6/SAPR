@@ -51,6 +51,30 @@ def price_beton(first, second, third, fourth, recicle, price_cement, price_sheb,
         third) + float(price_desert) * float(fourth) + float(recicle))
 
 
+def price_armatur(ZHBK, zagotov_price, K_armatur, zatraty_armatur):
+    return (float(ZHBK) * (float(zagotov_price) * float(K_armatur) + float(zatraty_armatur)))
+
+
+def sum_price_armatur(last, current):
+    return (float(last) + float(current))
+
+
+def price_armatur_for_qube(sum_price_armatur, V_beton):
+    return (float(sum_price_armatur) * float(V_beton))
+
+
+def udel_price_on_price(udel_price, price):
+    return (float(udel_price) * float(price))
+
+
+def trudoemk(rab_v_smenu, day_in_year, hour_in_day, year_proiz):
+    return (float(rab_v_smenu) * float(day_in_year) * float(hour_in_day) / float(year_proiz))
+
+
+def polnaya_zp(K_uchit_dop_zp, K_uchit_prem, stavka_for_hour, trudoemk):
+    return (float(K_uchit_dop_zp) * float(K_uchit_prem) * float(stavka_for_hour) * float(trudoemk))
+
+
 '''
 prfloat('Удельные капитальные вложения: ', form_ceh(1, 2, 3),
       '\nСтоимость ямных и туннельных камер тепловой обработки: ',

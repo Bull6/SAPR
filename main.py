@@ -22,6 +22,12 @@ class Connect_Window(QtWidgets.QMainWindow):
         self.ui.Button5.clicked.connect(self.Result5)
         self.ui.Button6.clicked.connect(self.Result6)
         self.ui.Button7.clicked.connect(self.Result7)
+        self.ui.Button8.clicked.connect(self.Result8)
+        self.ui.Button9.clicked.connect(self.Result9)
+        self.ui.Button10.clicked.connect(self.Result10)
+        self.ui.Button11.clicked.connect(self.Result11)
+        self.ui.Button12.clicked.connect(self.Result12)
+        self.ui.Button_clr_Price_amatur.clicked.connect(self.Clear)
 
     def Result1(self):
         result = (form_ceh(self.ui.price_S.text(), self.ui.Space.text(), self.ui.year_W.text()))
@@ -82,6 +88,37 @@ class Connect_Window(QtWidgets.QMainWindow):
                              self.ui.recicle.text(), self.ui.price_cement.text(), self.ui.price_sheb.text(),
                              self.ui.price_grav.text(), self.ui.price_desert.text())
         self.ui.price_beton.setText(str(result))
+
+    def Result8(self):
+        result = price_armatur(self.ui.ZHBK.text(), self.ui.zagotov_price.text(), self.ui.K_armatur.text(),
+                               self.ui.zatraty_armatur.text())
+        self.ui.price_armatur.setText(str(result))
+        result = sum_price_armatur(self.ui.sum_price_armatur.text(), self.ui.price_armatur.text())
+
+        self.ui.sum_price_armatur.setText(str(result))
+
+    def Clear(self):
+        self.ui.sum_price_armatur.setText('0')
+
+    def Result9(self):
+        result = price_armatur_for_qube(self.ui.sum_price_armatur.text(), self.ui.V_beton.text())
+        self.ui.price_armatur_for_qube.setText(str(result))
+
+    def Result10(self):
+        result = udel_price_on_price(self.ui.udel_energy.text(), self.ui.price_energy.text())
+        self.ui.coast_energy.setText(str(result))
+
+    def Result11(self):
+        result = udel_price_on_price(self.ui.udel_power_energy.text(), self.ui.price_power_energy.text())
+        self.ui.coast_power_energy.setText(str(result))
+
+    def Result12(self):
+        result = trudoemk(self.ui.rab_v_smenu.text(), self.ui.day_in_year.text(), self.ui.hour_in_day.text(),
+                          self.ui.year_proiz.text())
+        self.ui.trudoemk.setText(str(result))
+        result = polnaya_zp(self.ui.K_uchit_dop_zp.text(), self.ui.K_uchit_prem.text(), self.ui.stavka_for_hour.text(),
+                            self.ui.trudoemk.text())
+        self.ui.polnaya_zp.setText(str(result))
 
 
 if __name__ == "__main__":
